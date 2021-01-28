@@ -1,0 +1,25 @@
+
+.edit-form {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+}
+
+.slide-toggle-label {
+    width: 112px;
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    color: #00000086;
+}
+
+.slide-toggle-container {
+    margin-top: 18px;
+    margin-bottom: 18px;
+}
+
+
+.slide-toggle {
+    padding: 5px 0;
+}

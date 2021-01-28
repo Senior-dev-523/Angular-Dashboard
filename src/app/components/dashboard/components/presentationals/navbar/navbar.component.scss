@@ -1,0 +1,45 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    height: 64px;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 2;
+
+    .header-container {
+        display: flex;
+        align-self: center;
+        width: 100%;
+        margin-left: 16px;
+
+       .header-text {
+            font-family: 'Roboto';
+            font-weight: 500;
+            font-size: 14px;
+            color: white;
+        } 
+    }
+    
+}
+
+.aside--minimize {
+    left: 120px !important;
+    transition: all 0.3s ease;
+}
+
+.aside--enabled {
+   left: 240px !important;
+   transition: all 0.3s ease;
+}
+
+.header-fixed {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 97;
+}
+
+.header-base-light {
+    background-color: #2196F3;
+}

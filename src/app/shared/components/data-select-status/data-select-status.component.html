@@ -1,0 +1,17 @@
+<div class="d-flex align-items-center select-container">
+    <div class="dropdown-title dropdown-title-position">
+        <span> {{titleText}}: </span>
+    </div>
+    <div ngbDropdown class="d-inline-block dropdown-container">
+        <button class="btn btn-outline open-dropdown-button dropdown-text" id="dropdownBasic1" ngbDropdownToggle>
+            {{selectedState.title}}
+        </button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="w-100 dropdown-menu">
+            <div *ngFor="let state of states">
+                <button class="dropdown-menu-item dropdown-text" ngbDropdownItem (click)="selectState(state)">
+                    {{state.title}}
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

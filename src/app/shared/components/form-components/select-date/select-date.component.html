@@ -1,0 +1,23 @@
+<div style="position: relative">
+    <form [formGroup]="formGroup" class="w-100 h-100">
+        <div class="d-flex align-items-center date-select-container">
+            <button class="w-100 d-flex date-select-button date-filter-button" mat-flat-button (click)="picker.open()">
+                <div class="w-100 d-flex justify-content-between">
+                    <span class="date-button-text"> {{selectedState}} </span>
+                    <div style="width: 18px;">
+                        <span [inlineSVG]="'./assets/icons/date.svg'"> </span>
+                    </div>
+                </div>
+                <mat-form-field appearance="fill" style="position: absolute; top: 0; left: 0;">
+
+                    <input hidden="true" (dateInput)="selectState($event)" matInput [matDatepicker]="picker"
+                        formControlName="date">
+                    <mat-datepicker-toggle hidden="true" matSuffix [for]="picker"> </mat-datepicker-toggle>
+                    <mat-datepicker hidden="true" #picker>
+                        some
+                    </mat-datepicker>
+                </mat-form-field>
+            </button>
+        </div>
+    </form>
+</div>

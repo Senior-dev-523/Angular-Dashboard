@@ -1,0 +1,17 @@
+export const ERRORS = [
+    { code: 105, message: 'Elemento non trovato nel sistema.' },
+    { code: 1001, message: "Email o password non valida." },
+    { code: 1101, message: "Esiste gia' un ingrdiente con lo stesso titolo." },
+    { code: 1102, message: "Ingrediente non trovato nel sistema." },
+    { code: 1111, message: "Esiste gia' una categoria con lo stesso titolo." },
+    { code: 1112, message: "Categoria non trovata nel sistema." },
+    { code: 1122, message: "Esiste gia' un prodotto con lo stesso titolo." },
+    { code: 1123, message: "Prodotto non trovato nel sistema." },
+    { code: 1124, message: "Ingredienti assegnati non validi" },
+    { code: 1125, message: "Allergeni assegnati non validi" },
+    { code: 1126, message: "Categoria assegnata non valida" },
+    { code: 1142, message: "Formato file non valido." },
+    { code: 1143, message: "Dimensione massima dell'immagine superato." },
+    { code: 1145, message: "Si e' verificato un errore durante il caricamento." },
+    { code: 1161, message: "Esiste gia' una lingua con lo stesso titolo." },
+];

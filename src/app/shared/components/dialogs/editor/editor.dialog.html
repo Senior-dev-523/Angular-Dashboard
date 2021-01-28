@@ -1,0 +1,15 @@
+<div class="d-flex flex-column w-100 h-100">
+    <div class="d-flex justify-content-between align-items-center popup-header">
+        <div class="w-100 d-flex align-items-center">
+            <span class="menu-icon" style="fill: #02b4b6!important; margin-left: 9px;" [inlineSVG]="iconNameWithPath"></span>
+            <span class="popup-header-text"> {{title}} </span>
+        </div>
+   
+        <i class="material-icons" style="cursor: pointer; font-size: 20px; color: #117b78;" (click)="onClose()"> clear </i>
+    </div>
+
+    <div class="h-100 w-100">
+        <!-- Here the component passed to dialog will be loaded -->
+        <ng-template #container> </ng-template>
+    </div>
+</div>

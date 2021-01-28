@@ -1,0 +1,12 @@
+<div class="d-flex justify-content-between align-items-center grid-header-container">
+    <div class="d-flex align-items-center grid-header-title" style="width: 50%;">
+        <span class="menu-icon" style="fill: #02b4b6!important;" [inlineSVG]="'./assets/icons/' + iconName"></span>
+        {{title}}
+    </div>
+    <ng-container *ngIf="showCreateButton">
+        <button mat-button class="d-flex align-items-center justify-contentcenter grid-header-button" [disabled]="isDisabled" (click)="onCreate()">
+            <i class="material-icons grid-header-button-icon"> add </i>
+            <span class="grid-header-button-text"> Nuovo </span>  
+        </button>
+    </ng-container>
+</div>

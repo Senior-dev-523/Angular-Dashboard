@@ -1,0 +1,11 @@
+<div *customLet="currentStepId$ | async as currentStepId">
+    <div [hidden]="currentStepId !== 1">
+        <app-tenant-form (setTanatData)="setTanat($event)"> </app-tenant-form>
+    </div>
+    <div [hidden]="currentStepId !== 2">
+        <app-general-informations-form (setGeneralData)="setGeneral($event)"> </app-general-informations-form>
+    </div>
+    <div [hidden]="currentStepId !== 3">
+        <app-other-form (setOtherData)="setOther($event)"></app-other-form>
+    </div>
+</div>

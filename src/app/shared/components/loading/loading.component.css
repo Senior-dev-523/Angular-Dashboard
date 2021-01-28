@@ -1,0 +1,23 @@
+
+.loading { 
+    width: 180px;
+    height: 55px;
+    margin: auto;
+    margin-left: auto;
+    margin-left: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    -moz-animation: fadecolor 0.5s;
+    -webkit-animation: fadecolor 0.5s;
+    -ms-animation: fadecolor 0.5s;
+    animation: fadecolor 0.5s;
+    transition: ease-in-out 1100ms max-height;
+}
+
+.loading-text {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 400;
+    margin-right: 10px;
+} 

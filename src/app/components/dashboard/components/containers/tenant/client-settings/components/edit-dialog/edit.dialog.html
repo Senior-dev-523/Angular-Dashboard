@@ -1,0 +1,33 @@
+<div>
+    <div class="d-flex justify-content-between align-items-center popup-header">
+        <span class="popup-header-text"> Impostazioni </span>
+        <i class="material-icons" style="cursor: pointer;" (click)="onClose()"> clear </i>
+    </div>
+
+    <form style="padding: 24px;" class="h-100 edit-form" [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+
+        <mat-form-field class="mat-select" floatLabel="never" appearance="outline">
+            <mat-label>Tipo di Welcome Page</mat-label>
+            <mat-select disableOptionCentering formControlName="welcomePageType">
+                <mat-option *ngFor="let welcomePageType of welcomePageTypes" [value]="welcomePageType.value">
+                    {{welcomePageType.title}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+
+        <mat-form-field class="mat-select" floatLabel="never" appearance="outline">
+            <mat-label>Valuta</mat-label>
+            <mat-select disableOptionCentering formControlName="currencyType">
+                <mat-option *ngFor="let currency of currencys" [value]="currency.value">
+                    {{currency.title}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <app-image-selector [imgURL]="formData.QRCodeURL" style="margin-top: 14px;"> </app-image-selector>
+
+        <app-editor-footer [isDisabled]="formGroup.invalid" (onCreateEvent)="onSubmit()" (onCloseEvent)="onClose()">
+        </app-editor-footer>
+    </form>
+</div>

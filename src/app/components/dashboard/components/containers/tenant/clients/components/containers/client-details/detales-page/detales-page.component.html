@@ -1,0 +1,46 @@
+<div style="display: flex;">
+    <div style="display: flex; flex-direction: column; width: 216px;">
+        <mat-card>
+            <app-step-navigation [isHorizontalView]="false"> </app-step-navigation>
+        </mat-card>
+        <mat-card style="margin-top: 8px; height: 500px; overflow-y: auto;">
+            <div class="client-navigation-item" [ngClass]="{'navigation-item-selected': selectedtab === 'users'}">
+                <span class="navigation-title"> Utenti </span>
+                <button (click)="navgateToUserPage()" mat-button class="control-button navigation-button">VISUALIZZA</button>
+            </div>
+
+            <div class="client-navigation-item navigation-item" [ngClass]="{'navigation-item-selected': selectedtab === 'language'}">
+                <span class="navigation-title"> Lingue </span>
+                <button (click)="navgateToLanguagePage()" mat-button class="control-button navigation-button">VISUALIZZA</button>
+            </div>
+
+            <div class="client-navigation-item navigation-item" [ngClass]="{'navigation-item-selected': selectedtab === 'restaurants'}">
+                <span class="navigation-title"> Ristoranti </span>
+                <button (click)="navgateToRestaurantsPage()" mat-button class="control-button navigation-button">VISUALIZZA</button>
+            </div>
+
+            <div class="client-navigation-item navigation-item" [ngClass]="{'navigation-item-selected': selectedtab === 'client-settings'}">
+                <span class="navigation-title"> Impostazioni </span>
+                <button (click)="navgateToSettingsPage()" mat-button class="control-button navigation-button">VISUALIZZA</button>
+            </div>
+
+            <div class="client-navigation-item navigation-item" [ngClass]="{'navigation-item-selected': selectedtab === 'software-modules'}">
+                <span class="navigation-title"> Moduli Software </span>
+                <button (click)="navgateToSoftwareModulesPage()" mat-button class="control-button navigation-button">VISUALIZZA</button>
+            </div>
+
+            <div class="client-navigation-item navigation-item" [ngClass]="{'navigation-item-selected': selectedtab === 'devices'}">
+                <span class="navigation-title"> Dispositivi </span>
+                <button (click)="navgateToDevicesPage()" mat-button class="control-button navigation-button">VISUALIZZA</button>
+            </div>
+            
+            <div class="client-navigation-item navigation-item" [ngClass]="{'navigation-item-selected': selectedtab === 'documents'}">
+                <span class="navigation-title"> Documenti </span>
+                <button (click)="navgateToDocumentsPage()" mat-button class="control-button navigation-button">VISUALIZZA</button>
+            </div>
+        </mat-card>
+    </div>
+    <div style="width: 100%; padding-left: 16px;">
+        <router-outlet></router-outlet>
+    </div>
+</div>

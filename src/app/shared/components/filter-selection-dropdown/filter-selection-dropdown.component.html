@@ -1,0 +1,22 @@
+<form class="d-flex-column" [formGroup]="formGroup" class="w-100 h-100">
+    <mat-form-field style="width: 100%;">
+        <mat-select (openedChange)="onClose()" [placeholder]="displayName" formControlName="formItems"
+            [disableOptionCentering]="true">
+            <div style="padding: 5px;">
+                <input class="search-input" (keyup)="onSearchKeyUp($event)" #searchInput type="text"
+                    placeholder="Cerca...">
+                <span class="d-flex align-items-center" style="
+                    position: absolute;
+                    top: 14px;
+                    left: 14px;">
+                    <i class="material-icons"> search </i>
+                </span>
+            </div>
+            <div *ngFor="let item of filtredItems">
+                <mat-option [value]="item.id" (click)=selectItem(item.id)>
+                    {{ item.name }}
+                </mat-option>
+            </div>
+        </mat-select>
+    </mat-form-field>
+</form>

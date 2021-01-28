@@ -1,0 +1,58 @@
+<div>
+    <div class="d-flex justify-content-between align-items-center popup-header">
+        <span class="popup-header-text"> Info documento </span>
+        <i class="material-icons" style="cursor: pointer;" (click)="onClose()"> clear </i>
+    </div>
+
+    <form class="h-100 edit-form" [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+
+        <div class="h-100 container-fluid" style="padding: 0;">
+            <div class="h-100 row">
+                <div class="col-6">
+                    <mat-form-field class="w-100 mat-input" floatLabel="never" appearance="outline">
+                        <mat-label>Data Fattura</mat-label>
+                        <input matInput [matDatepicker]="fatturaPicker" formControlName="invoiceDate">
+                        <mat-datepicker-toggle matSuffix [for]="fatturaPicker"></mat-datepicker-toggle>
+                        <mat-datepicker #fatturaPicker></mat-datepicker>
+                    </mat-form-field>
+
+                    <mat-form-field class="w-100 mat-input" floatLabel="never" appearance="outline">
+                        <mat-label>Importo</mat-label>
+                        <input type="number" matInput class="mat-input" formControlName="amount" />
+                    </mat-form-field>
+
+
+                    <mat-form-field class="w-100 mat-input" floatLabel="never" appearance="outline">
+                        <mat-label>Allegato</mat-label>
+                        <input type="text" matInput class="mat-input" formControlName="attached" />
+                    </mat-form-field>
+                </div>
+
+                <div class="col-6">
+                    <mat-form-field class="w-100 mat-input" floatLabel="never" appearance="outline">
+                        <mat-label>Numero Fattura</mat-label>
+                        <input type="text" matInput class="mat-input" formControlName="invoiceNumber" />
+                    </mat-form-field>
+
+
+                    <mat-form-field class="w-100 mat-input" floatLabel="never" appearance="outline">
+                        <mat-label>Data scadenza</mat-label>
+                        <input matInput [matDatepicker]="picker" formControlName="expiryDate">
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                    </mat-form-field>
+
+
+                    <div class="d-flex slide-toggle">
+                        <samp class="slide-toggle-label">Pagato</samp>
+                        <mat-slide-toggle class="mat-slide-toggle" formControlName="paid" color="primary">
+                        </mat-slide-toggle>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <app-editor-footer [isDisabled]="formGroup.invalid" (onCreateEvent)="onSubmit()" (onCloseEvent)="onClose()">
+        </app-editor-footer>
+    </form>
+</div>

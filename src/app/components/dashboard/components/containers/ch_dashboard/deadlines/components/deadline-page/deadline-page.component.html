@@ -1,0 +1,34 @@
+<div>
+    <div class="d-flex filters-container justify-content-between">
+        <div class="d-flex" style="flex-wrap: wrap;">
+            <app-data-search></app-data-search>
+            <div class="d-flex select-container">
+                <div class="dropdown-title dropdown-title-position" style="padding-top: 4px;">
+                    <span class="text1"> Periodo: </span>
+                </div>
+            </div>
+            <mat-form-field appearance="fill" class="npm" style="width: 190px;">      
+                <mat-date-range-input [rangePicker]="picker">      
+                  <input matStartDate placeholder="Start date">      
+                  <input matEndDate placeholder="End date">      
+                </mat-date-range-input>      
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>      
+                <mat-date-range-picker #picker></mat-date-range-picker>      
+            </mat-form-field> 
+            <app-data-select-status [states]="tenantStates" [titleText]="'Tenant'"> </app-data-select-status>
+        </div>
+        <button mat-raised-button class="add-submit-button add-button-text">
+            EXPORT
+        </button>
+    </div>
+    <mat-card class="grid-container">
+        <div *ngIf="deadlinepageData && languages; else loading">
+            <app-grid [gridOption]="gridOption" [gridColumns]="gridColumns" [gridData]="deadlinepageData"
+                [displayedColumns]="displayedColumns">
+            </app-grid>
+        </div>
+        <ng-template #loading>
+            <app-loading></app-loading>
+        </ng-template>
+    </mat-card>
+</div>

@@ -1,0 +1,20 @@
+<div>
+    <div class="d-flex justify-content-between align-items-center popup-header">
+        <span class="popup-header-text"> Aggiungi moduli </span>
+        <i class="material-icons" style="cursor: pointer;" (click)="onClose()"> clear </i>
+    </div>
+
+    <form style="padding: 24px;" class="h-100 edit-form" [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+
+        <mat-form-field floatLabel="never" appearance="outline">
+            <mat-label>Select a feature</mat-label>
+            <mat-select  multiple disableOptionCentering formControlName="featureIds">
+              <mat-option *ngFor="let feature of featuresList" [value]="feature.id">{{feature.value}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+
+        <app-editor-footer [isDisabled]="formGroup.invalid" (onCreateEvent)="onSubmit()" (onCloseEvent)="onClose()">
+        </app-editor-footer>
+    </form>
+</div>

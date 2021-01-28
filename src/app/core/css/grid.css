@@ -1,0 +1,109 @@
+
+/*-------------------------------------*/
+/*---------- Grid pagination ---------*/
+/*-------------------------------------*/
+
+
+/* Grid filters */
+
+.grid-filter-container {
+    padding: 25px;
+}
+
+/* Grid pagination step select */
+
+.dropdown-size > .btn-primary:hover {
+    color: #FFFFFF!important;
+}
+
+/* Grid pagination buttons */
+
+.btn:focus {
+    box-shadow: none!important;
+}
+
+.grid-header-container {
+    height: 50px;
+    padding: 0 12px;
+ }
+
+.grid-header-title {
+    font-family: 'Poppins';
+    color: #535353;
+    font-weight: 500;
+    font-size: 12px;
+    margin: 0;
+}
+
+.grid-header-button {    
+    min-width: 60px;
+    width: 60px;
+    height: 26px;
+    padding: 0 9px;
+    background-color: #02b4b6;
+    color: white;
+}
+
+.grid-header-button-text {
+    color: #ffffff;
+    font-family: 'Roboto';
+    font-size: 9px;
+    font-weight: 400;
+}
+
+.grid-header-button-icon {
+    font-size: 10px;
+}
+
+/* Grid */
+
+.mat-table {
+    width: 100%;
+}
+
+.mat-row {
+    border-bottom: 1px solid #f0f3ff;
+    height: 56px!important;
+}
+
+.mat-header-row {
+   height: 56px!important;
+}
+
+.mat-header-cell {
+    border-bottom-width: 0px!important;
+    border-bottom-style: none!important;
+    border-bottom: 1px solid #f0f3ff!important; 
+}
+
+.header-center > .mat-sort-header-container {
+    justify-content: center;
+}
+
+.header-center > .mat-sort-header-container > .mat-sort-header-content {
+    margin-left: 15px;
+}
+
+.aling-sort-header >
+.mat-sort-header-container >
+.mat-sort-header-button {
+    margin-left: 15px;
+    outline: none!important;
+}
+
+.mat-cell {
+    border-bottom-width: 0px!important;
+    border-bottom-style: none!important;
+}
+
+/* Active cell */
+
+.active-status-container {
+    width: 70px;
+}
+
+.active-status {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}

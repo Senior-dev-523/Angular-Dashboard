@@ -1,0 +1,57 @@
+<mat-card class="h-100">
+    <form class="h-100 tenant-form"
+        [formGroup]="tenantForm"
+        (ngSubmit)="onSubmit()">
+        <mat-form-field class="mat-input"
+                        floatLabel="never"
+                        appearance="outline">
+            <mat-label>Nome Tenant*</mat-label>
+            <input type="text"
+                    matInput
+                    class="mat-input" 
+                    formControlName="tenantName"/>
+        </mat-form-field>
+
+        <mat-form-field class="mat-input"
+                        floatLabel="never"
+                        appearance="outline">
+            <mat-label>Sotto dominio URL*</mat-label>
+            <input type="text"
+                    matInput
+                    formControlName="subdomain"/>
+        </mat-form-field>
+        <mat-form-field floatLabel="never" 
+                        class="mat-input"
+                        appearance="outline">
+            <mat-label>Data Attivazione</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="date" color="primary">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
+        <div class="d-flex flex-column slide-toggle-container">
+            <div class="d-flex slide-toggle">
+                <samp class="slide-toggle-label">Attivo</samp>
+                <mat-slide-toggle class="mat-slide-toggle" formControlName="active" color="primary">
+                </mat-slide-toggle>
+            </div>
+            <div class="d-flex slide-toggle">
+                <samp class="slide-toggle-label">Tenant Demo</samp>
+                <mat-slide-toggle class="mat-slide-toggle" formControlName="tenantDemo" color="primary">
+                </mat-slide-toggle>
+            </div>
+        </div>
+        
+        <div class="w-100 d-flex align-items-center justify-content-between form-footer" style=" margin-top: auto;">
+            <span class="footer-description"> NB: * Indica che il campo è obbligatorio </span>
+            <div class="control-buttons-container"> 
+                <button mat-button (click)="returnToParentURL()" class="control-button cansle-button">ANNULLA</button>
+                <button mat-raised-button 
+                        [disabled]="tenantForm.invalid" 
+                        class="control-button confirm-button" 
+                        color="primary" 
+                        type="submit"> AVANTI </button>
+            </div>
+        </div>
+    </form>
+</mat-card>

@@ -1,0 +1,13 @@
+<form (ngSubmit)="onSubmit()">
+    <div class="d-flex justify-content-between align-items-center popup-header">
+        <span class="popup-header-text"> Upload Logo </span>
+        <i class="material-icons" style="cursor: pointer;" (click)="onClose()"> clear </i>
+    </div>
+
+    <div style="padding: 24px;" class="h-100 edit-form">
+        <app-image-selector [imgURL]="imageURL" (onFileChanges)="onFileChanges($event)"> </app-image-selector>
+
+        <app-editor-footer [isDisabled]="false" (onCreateEvent)="onSubmit()" (onCloseEvent)="onClose()">
+        </app-editor-footer>
+    </div>
+</form>

@@ -1,0 +1,179 @@
+<div class="table-container">
+    <table mat-table matSort [dataSource]="dataSource" class="mat-table">
+        <!-- Title Column -->
+        <ng-container *ngFor="let column of gridColumns" [matColumnDef]="column.columnDef">
+
+            <ng-container *ngIf="column.type == 'string'">
+                <th class="table-header-text" style="justify-content: flex-start;" [ngClass]="column.styleClass" mat-header-cell *matHeaderCellDef mat-sort-header> 
+                    {{column.header}} 
+                </th>
+            </ng-container>
+
+            <ng-container *ngIf="column.type == 'string-center'">
+                <th class="table-header-text header-center" [ngClass]="column.styleClass" mat-header-cell *matHeaderCellDef mat-sort-header>
+                    <span> {{column.header}} </span>
+                </th>
+            </ng-container>
+            
+            <ng-container *ngIf="column.type == 'translation'">
+                <th class="table-header-text header-center" [ngClass]="column.styleClass" mat-header-cell *matHeaderCellDef mat-sort-header> 
+                    {{column.header}}
+                </th>
+            </ng-container>
+
+            <ng-container *ngIf="column.type == 'control'">
+                <th class="table-header-text header-center" [ngClass]="column.styleClass" mat-header-cell *matHeaderCellDef> 
+                    {{column.header}} 
+                </th>
+            </ng-container>
+
+            <ng-container *ngIf="column.type == 'category'">
+                <th class="table-header-text header-center" [ngClass]="column.styleClass" mat-header-cell *matHeaderCellDef mat-sort-header> 
+                    {{column.header}} 
+                </th>
+            </ng-container>
+            
+            <ng-container *ngIf="column.type == 'bool'">
+                <th class="table-header-text header-center" [ngClass]="column.styleClass" mat-header-cell *matHeaderCellDef mat-sort-header>
+                    <span> {{column.header}} </span>
+                </th>
+            </ng-container>
+
+            <ng-container *ngIf="column.type == 'active'">
+                <th class="table-header-text header-center" [ngClass]="column.styleClass" mat-header-cell *matHeaderCellDef mat-sort-header>
+                    <span> {{column.header}} </span>
+                </th>
+            </ng-container>
+
+            <ng-container *ngIf="column.type == 'price'">
+                <th class="table-header-text header-center" [ngClass]="column.styleClass" mat-header-cell *matHeaderCellDef mat-sort-header>
+                    <span> {{column.header}} </span>
+                </th>
+            </ng-container>
+
+            <ng-container *ngIf="column.type == 'order'">
+                <th class="table-header-text header-center" [ngClass]="column.styleClass" mat-header-cell *matHeaderCellDef mat-sort-header>
+                    <span> {{column.header}} </span>
+                </th>
+            </ng-container>
+
+            <ng-container *ngIf="column.type == 'image'">
+                <th class="table-header-text header-center" [ngClass]="column.styleClass" mat-header-cell *matHeaderCellDef>
+                    <span> {{column.header}} </span>
+                </th>
+            </ng-container>
+
+            <ng-container *ngIf="column.type == 'attached'">
+                <th class="table-header-text header-center" [ngClass]="column.styleClass" mat-header-cell *matHeaderCellDef>
+                  <span> {{column.header}} </span> 
+                </th>
+            </ng-container>
+            <!-- td -->
+
+            <ng-container *ngIf="column.type == 'attached'">
+                <td mat-cell class="pad-null" [ngClass]="column.styleClass" *matCellDef="let row"
+                    style="font-size: 13px; text-align: center;">
+                    <div class="icon-container" style="margin: auto;">
+                        <span class="menu-icon" style="fill: #1976D2" [inlineSVG]="getBaseTabIconPath('pdf.svg')"> </span>
+                    </div>
+                </td>
+            </ng-container>
+
+            <ng-container *ngIf="column.type == 'bool'">
+                <td mat-cell class="pad-null" [ngClass]="column.styleClass" *matCellDef="let row"
+                    style="font-size: 13px; text-align: center;">
+                    <mat-checkbox [disabled]="true" [checked]="column.cell(row)" color="primary">
+                    </mat-checkbox>
+                </td>
+            </ng-container>
+
+            <ng-container *ngIf="column.type == 'string'">
+                <td mat-cell class="table-row-text pad-null" [ngClass]="column.styleClass" *matCellDef="let row">
+                    {{ column.cell(row) }}
+                </td>
+            </ng-container>
+
+            <ng-container *ngIf="column.type == 'string-center'">
+                <td mat-cell [ngClass]="column.styleClass" *matCellDef="let row"  
+                    class="table-row-text" style="text-align: center;">
+                {{ column.cell(row) }}
+            </td>
+            </ng-container>
+
+            <ng-container *ngIf="column.type == 'translation'">
+                <td mat-cell class="table-row-text pad-null" [ngClass]="column.styleClass" *matCellDef="let row">
+                    <div *ngFor="let language of column.cell(row)">
+                        <ng-container *ngIf="selectedlanguage">
+                            <ng-container *ngIf="language.languageId == selectedlanguage.id">
+                                {{language.description}}
+                            </ng-container>
+                        </ng-container>
+                    </div>
+                </td>
+            </ng-container>
+
+            <ng-container *ngIf="column.type == 'category'">
+                <td mat-cell class="table-row-text pad-null" [ngClass]="column.styleClass" *matCellDef="let row" style="text-align: center;">
+                    {{getCategory(column.cell(row))}}
+                </td>
+            </ng-container>
+            
+            <ng-container *ngIf="column.type == 'price'">
+                <td mat-cell class="table-row-text pad-null" [ngClass]="column.styleClass" *matCellDef="let row" style="text-align: center;">
+                    {{ column.cell(row) | currency:'€ ' }}
+                </td>
+            </ng-container>
+
+            <ng-container *ngIf="column.type == 'order'">
+                <td mat-cell class="pad-null" [ngClass]="column.styleClass" *matCellDef="let row"
+                    style="font-size: 13px; text-align: center;">
+                    {{ column.cell(row) }}
+                </td>
+            </ng-container>
+
+            <!-- Image Column image --> 
+            <ng-container *ngIf="column.type == 'image'">
+                <td mat-cell class="pad-null" [ngClass]="column.styleClass" *matCellDef="let row" style="text-align: center; font-size: 13px;">
+                    <img [src]="column.cell(row)" height="25" style="border-radius: 5px;">
+                </td>
+            </ng-container>
+
+            <ng-container *ngIf="column.type == 'control'">
+                <td mat-cell class="pad-null" [ngClass]="column.styleClass" *matCellDef="let row">
+                    <div class="d-flex align-items-center justify-content-center" style="margin: auto">
+                        <ng-container *ngIf="gridOption.editButton">
+                            <div class="control-icon" (click)="onEdit(column.cell(row))">
+                                <span class="menu-icon" style="cursor: pointer;" [inlineSVG]="getBaseTabIconPath('edit.svg')"> </span>
+                            </div>
+                        </ng-container>
+
+                        <ng-container *ngIf="gridOption.deleteButton">
+                            <div class="control-icon" (click)="onRestore(column.cell(row))">
+                                <span class="menu-icon" style="cursor: pointer;" [inlineSVG]="getBaseTabIconPath('delete.svg')"> </span>
+                            </div>
+                        </ng-container>
+
+                        <ng-container *ngIf="gridOption.restoreButton">
+                            <div class="control-icon" (click)="onRestore(column.cell(row))">
+                                <span class="menu-icon" style="cursor: pointer;" [inlineSVG]="getBaseTabIconPath('restore.svg')"> </span>
+                            </div>
+                        </ng-container>
+                    </div>
+                </td>
+            </ng-container>
+
+            <ng-container *ngIf="column.type == 'active'">
+                <td mat-cell class="pad-null" [ngClass]="column.styleClass" *matCellDef="let row" style="font-size: 13px; ">
+                    <div class="active-status-container active-status" style="margin: auto;"
+                        [ngClass]="column.cell(row)? 'Online' : 'Offline'">
+                    </div>
+                </td>
+            </ng-container>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+</div>
+
+<mat-paginator [pageSizeOptions]="[10, 20, 30]"></mat-paginator>

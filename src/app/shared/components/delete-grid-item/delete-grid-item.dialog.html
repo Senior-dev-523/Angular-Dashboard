@@ -1,0 +1,11 @@
+<div class="d-flex-column" style="height: 100%;">
+    <div style="padding: 13px 0px; line-height: 1.2; text-align: center;">
+        Sicuro di voler eliminare {{data.itemName}} selezionato?
+    </div>
+    <div class="d-flex  align-items-center justify-content-center" style="background-color: #ececec; height: 57px;">
+        <button mat-stroked-button (click)="onSubmit()" class="flat-button">
+            <span>Si</span>
+        </button>
+        <button mat-stroked-button (click)="onNoClick()" class="flat-button"> No </button>
+    </div>
+</div>

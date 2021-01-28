@@ -1,0 +1,106 @@
+#sidebar-container {
+    position: fixed;
+    min-height: 100vh;
+    background-color: #ffffff;
+    padding: 0;
+    
+}
+
+#sidebar1 {
+    height: 88%;
+    border-bottom: 1px solid #E5E5E5;
+}
+
+#sidebar2 {
+    position: fixed;
+    background-color: #ffffff;
+    padding-left: 12px;
+    padding-top: 16px;
+    min-height: 12%;
+}
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding: 0 20px;
+    height: 64px;
+    border-bottom: 1px solid #E5E5E5;
+}
+
+.sidebar-text {
+    font-size: 20px;
+    width: 500px;
+    font-size: 'Roboto';
+    color: black;
+}
+
+.toggle-button {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+}
+
+.menu-icon {
+    fill: rgba(0, 0, 0, 0.54) !important;
+}
+
+.menu-icon:hover {
+    fill: #1976D2 !important;
+}
+
+.sidebar-expanded {
+    width: 240px;
+    transition: all 0.3s ease;
+}
+
+.sidebar-collapsed {
+    width: 120px;
+    transition: all 0.3s ease;
+}
+
+.side-brand-collapse {
+    justify-content: center;
+}
+
+.side-brand-full {
+    justify-content: space-between;
+}
+
+.menu-nav {
+    margin: 0;
+    list-style: none;
+    padding: 23px 0;
+    cursor: pointer;
+}
+
+.menu-nav-container {
+    max-height: 100vh;
+    position: relative;
+    overflow: auto;
+}
+
+.menu-sub-section {
+    display: flex;
+    margin-left: 19px;
+    margin-top: 23px;
+    margin-bottom: 15px;
+    white-space: nowrap;
+}
+
+.menu-sub-text {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 8px;
+    line-height: 12px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #127573;
+}
+
+.logout-text {
+    margin-left: 35px;
+    font-size: 14px;
+    font-weight: 500;
+}

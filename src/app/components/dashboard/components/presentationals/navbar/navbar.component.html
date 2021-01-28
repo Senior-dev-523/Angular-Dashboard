@@ -1,0 +1,6 @@
+<nav class="header header-fixed header-base-light" 
+    [ngClass]="{'aside--enabled': isExtended$ | async, 'aside--minimize': !(isExtended$ | async)}">
+   <div class="header-container">
+       <span class="header-text"> {{ fullUserName }} </span> 
+   </div>
+</nav>

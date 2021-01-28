@@ -1,0 +1,139 @@
+.w-75 {
+    /*
+    max-width: 100px !important;
+    min-width: 70px !important;
+    */
+    width: 10% !important; 
+}
+
+.ww-60 {
+    width: 60% !important; 
+}
+
+.w-100 {
+    max-width: 100px!important;
+    width: 100px !important;
+}
+
+.w-120 {
+    max-width: 120px!important;
+    width: 120px !important;
+}
+
+.w-140 {
+    max-width: 140px!important;
+    width: 140px!important; 
+}
+
+.w-160 {
+    max-width: 160px!important;
+    width: 160px!important;
+}
+
+.w-20 {
+    max-width: 20%!important;
+    width: 20%!important;
+}
+
+.pad-null {
+    padding-left: 0!important;
+    padding-right: 0!important;
+}
+
+.mleft-15 {
+    padding-left: 16px!important;
+}
+
+.mright-15 {
+    padding-right: 16px!important;
+}
+
+.table-container {
+    position: relative;
+    overflow: auto;
+}
+
+.table-row-text {
+    color: #666666;
+    font-family: 'Roboto';
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.table-header-text {
+    color: #ffffff;
+    font-family: 'Roboto';
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    background-color: #2196F3 !important;
+}
+
+.pagination-text {
+    color: #666666;
+    font-family: 'Roboto';
+    font-size: 9px;
+    font-weight: 300;
+}
+
+.pagination-step-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    width: 41px;
+    height: 22px;
+    color: #02b4b6 !important;
+    background-color: rgb(2 180 182 / 0.1) !important;
+    border-color: rgba(0, 0, 0, 0) !important;
+}
+
+.pagination-step-button:hover>.pagination-step-button::after {
+    color: #FFFFFF!important;
+}
+
+.pagination-step-button:hover {
+    background-color: #02b4b6!important;
+}
+
+.pagination-step-button:hover>.pagination-step-button-text {
+    color: #FFFFFF!important;
+}
+
+.pagination-step-button-text {
+    color: #02b4b6;
+    font-family: 'Roboto';
+    font-size: 9px;
+    font-weight: 500;
+}
+
+.dropdown-item:active {
+    color: #FFFFFF;
+    background-color: #02b4b6!important;
+}
+
+.page-link:focus {
+    box-shadow: none!important;
+}
+
+.Online {
+    background-color: #00C853;
+}
+
+.Offline {
+    background-color: #C62828;
+}
+
+.control-icon {
+    cursor: pointer;
+    width: 14px;
+    margin: 5px;
+}
+
+.menu-icon {
+    fill: #D7D5D5;
+}
+
+.menu-icon:hover {
+    fill: #0053CB;
+}

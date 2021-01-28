@@ -1,0 +1,22 @@
+<form [formGroup]="authForm" class="auth-form">
+    <div class="auth-form-container">
+        <div class="auth-form-title-container">
+            <span class="auth-form-title"> Log in </span>
+            <span class="auth-form-sub-title"> Log in to access to your account </span>
+        </div>
+
+      <div class="auth-form-input-container">
+        <input autocomplete="off" placeholder="Login" formControlName="emailInput" type="email" class="form-input"> 
+        <input autocomplete="off" placeholder="Password" formControlName="passwordInput" class="form-input" >
+      </div>
+
+      <div class="auth-form-submit-container">
+        <button mat-raised-button class="auth-form-submit-button" (click)="onSubmit()" [disabled]="authForm.invalid">
+          <div class="menu-icon-auth-container">
+            <span class="menu-icon" [inlineSVG]="getBaseTabIconPath('log-in.svg')"> </span> 
+          </div>
+          <span class="auth-submit-button-text">Login</span>
+        </button>
+      </div>
+    </div>
+</form>

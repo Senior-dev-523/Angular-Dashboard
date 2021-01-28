@@ -1,0 +1,19 @@
+.control-buttons-container {
+    margin: 0;
+    width: 100%;
+}
+
+.cancel-button {
+    background-color: white;
+    box-shadow: none;
+    color: #C62828;
+    border: 1px solid #C62828;
+}
+
+.control-icon {
+    margin-right: 12px;
+}
+
+.menu-icon {
+    fill: #C62828;
+}

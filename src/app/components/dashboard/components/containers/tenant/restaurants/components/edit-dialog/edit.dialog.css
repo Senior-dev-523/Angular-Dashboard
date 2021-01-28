@@ -1,0 +1,35 @@
+
+.edit-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.slide-toggle-label {
+    width: 112px;
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    color: #00000086;
+}
+
+.slide-toggle-container {
+    margin-top: 18px;
+    margin-bottom: 18px;
+}
+
+
+.slide-toggle {
+    padding: 5px 0;
+}
+
+.description-input {
+    height: 110px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    letter-spacing: 0.15px;
+    color: rgba(0, 0, 0, 0.87);
+}

@@ -1,0 +1,76 @@
+mat-card {
+    padding: 0;
+}
+.mat-card-header {
+    font-family: 'Roboto';
+    font-size: 16px;
+    letter-spacing: 0.15px;
+    color: rgba(0, 0, 0, 0.87);
+    padding: 16px; 
+    border-bottom: solid 1px #E5E5E5;
+}
+
+.tenant-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.slide-toggle-label {
+    width: 112px;
+
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    color: #00000086;
+}
+
+.slide-toggle-container {
+    margin-top: 18px;
+}
+
+.slide-toggle {
+    padding: 5px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.footer-description {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: rgba(0, 0, 0, 0.54);
+}
+
+.mat-radio-button {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0.25px;
+    color: rgba(0, 0, 0, 0.87);
+}
+
+.input-icon-container {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    opacity: 1;
+    left: -29px;
+    top: 10px;
+}
+
+.menu-icon {
+    fill: rgba(0, 0, 0, 0.24) !important; 
+}
+
+.control-buttons-container {
+    width: 250px;
+}

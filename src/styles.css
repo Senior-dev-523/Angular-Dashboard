@@ -1,0 +1,376 @@
+/* You can add global styles to this file, and also import other style files */
+@import './app/core/css/side-nav.css';
+@import './app/core/css/grid.css';
+@import './app/core/css/editor-form.css';
+
+/*
+@font-face {
+    font-family: 'Raleway-SemiBold';
+    src: url('./assets/styles/Raleway-SemiBold.ttf');
+    font-weight: 300;
+    font-style: normal;
+}
+*/
+
+@-moz-keyframes fadecolor {	
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+ 
+@-webkit-keyframes fadecolor {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+ 
+@-ms-keyframes fadecolor {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}		
+ 
+@keyframes fadecolor {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+    position: revert !important;
+    overflow: hidden;
+}
+
+html, body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-size: 13px !important;
+    font-weight: 300;
+    font-family: 'Roboto';
+    -webkit-font-smoothing: antialiased;
+    -ms-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', "Segoe UI", 'Roboto', "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: #f2f3f8;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: white;
+  -webkit-box-shadow: 0 0 0px 1000px rgba(255, 255, 255, 0) inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+::-webkit-scrollbar {
+    width: 16px;
+    height: 0;
+}
+::-webkit-scrollbar-thumb {
+    height: 8px;
+    border: 4px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    -webkit-border-radius: 1em;
+    background-color: rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.025);
+}
+::-webkit-scrollbar-button {
+    width: 0;
+    height: 0;
+    display: none;
+}
+::-webkit-scrollbar-corner {
+    background-color: transparent;
+}
+
+
+label {
+    margin-bottom: 0!important;
+}
+
+button {
+    outline: none !important;
+}
+
+input:focus {
+    outline: none
+}
+
+.mat-ripple { 
+    display: none; 
+}
+
+.icon-container {
+    height: 20px;  
+    width: 18px;  
+}
+
+.auth-form-submit-button > .mat-button-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.filters-container {
+    margin-bottom: 24px;
+}
+
+.filters-container > input::placeholder {
+    color: rgba(0, 0, 0, 0.24);
+}
+
+.select-container {
+    padding: 5px 15px;
+}
+
+.add-submit-button {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    width: 168px;
+    height: 32px;
+    background-color: #2196F3;
+}
+
+.add-button-text {
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: white;
+}
+
+th.mat-header-cell:first-of-type {
+    padding-left: 14px !important;
+}
+
+th.mat-header-cell:last-of-type {
+    padding-right: 0px !important;
+}
+
+.control-buttons-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 232px;
+    padding: 0;
+    margin: 16px 0;
+}
+
+.control-button {
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 1.25px;
+    color: #FFFFFF;
+}
+
+.cansle-button {
+    height: 32px;
+    color: hsla(0, 0%, 0%, 0.54);
+}
+
+.cansle-button:hover {
+    color: #0053CB;
+    background: #E3F2FD;
+}
+
+.confirm-button {
+    width: 128px;
+    height: 48px;
+
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #FFFFFF;
+}
+
+.mat-input >
+.mat-form-field-wrapper >
+.mat-form-field-flex >
+.mat-form-field-infix {
+    padding: 14px 0 18px 0;
+}
+
+.mat-input >
+.mat-form-field-wrapper >
+.mat-form-field-flex >
+.mat-form-field-infix >
+.mat-input-element {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.87);
+}
+
+.mat-input >
+.mat-form-field-wrapper >
+.mat-form-field-flex >
+.mat-form-field-infix >
+.mat-form-field-label-wrapper > 
+.mat-form-field-label {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.15px;
+    
+    color: #9E9E9E;
+}
+
+.mat-focused >
+.mat-form-field-wrapper >
+.mat-form-field-flex >
+.mat-form-field-infix >
+.mat-form-field-label-wrapper > 
+.mat-form-field-label {
+    color: #2196F3;
+}
+
+.mat-form-field-invalid >
+.mat-form-field-wrapper >
+.mat-form-field-flex >
+.mat-form-field-infix >
+.mat-form-field-label-wrapper > 
+.mat-form-field-label {
+    color: #ff5722;
+}
+.mat-form-field >
+.mat-form-field-wrapper {
+    height: 47px;
+}
+
+.mat-form-field >
+.mat-form-field-wrapper >
+.mat-form-field-flex {
+    height: 30px;
+    padding-left: 8%;
+    padding: 0px;
+    background-color: #f2f3f8;
+    align-items: center;
+}
+.mat-form-field >
+.mat-form-field-wrapper >
+.mat-form-field-flex >
+.mat-form-field-infix {
+    font-size: 14px;
+}
+
+/* Select */
+
+.mat-select >
+.mat-form-field-wrapper >
+.mat-form-field-flex >
+.mat-form-field-infix {
+    padding: 18px 0 18px 0;
+}
+
+
+.mat-select >
+.mat-form-field-wrapper >
+.mat-form-field-flex >
+.mat-form-field-infix >
+.mat-form-field-label-wrapper > 
+.mat-form-field-label {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.15px;
+    
+    color: #9E9E9E;
+}
+
+/* Input with icon */
+
+.input-icon >
+.mat-form-field-wrapper >
+.mat-form-field-flex {
+    padding-left: 50px;
+}
+
+.input-icon >
+.mat-form-field-wrapper >
+.mat-form-field-flex >
+.mat-form-field-outline >
+.mat-form-field-outline-start {
+    min-width: 45px;
+}
+
+.mat-focused >
+.mat-form-field-wrapper >
+.mat-form-field-flex > 
+.mat-form-field-infix > 
+.input-icon-container >
+.menu-icon {
+    fill: #2196F3 !important; 
+}
+
+.mat-focused >
+.mat-form-field-wrapper >
+.mat-form-field-flex > 
+.mat-form-field-infix > 
+.input-icon-container-end >
+.menu-icon {
+    fill: #2196F3 !important; 
+}
+
+/* Edit dialog */
+.popup-header-text {
+    color: black;
+    font-family: 'Roboto';
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.popup-header {
+    background-color: #fff;
+    border: 1px solid #dedede;
+    min-height: 84px!important;
+    padding: 0px 26px;
+}
+
+/*  HIDE INPUT-TYPE:NUMBER ARROWS */
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* */
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

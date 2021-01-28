@@ -1,0 +1,8 @@
+.flat-button {
+    min-width: 75px;
+    height: 32px;
+    margin: 5px;
+    background-color: #f5f5f5;
+    border-color: #a2b4b8;
+    color: #28484f;
+}

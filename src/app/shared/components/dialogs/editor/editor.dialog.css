@@ -1,0 +1,40 @@
+
+.popup-header {
+    background-color: #fff;
+    border: 1px solid #dedede;
+    min-height: 50px!important;
+    padding: 0px 26px;
+}
+
+.popup-content {
+    display: flex;
+    height: 300px;
+    padding: 30px 30px 0px 30px;
+    background-color: #fff;
+}
+
+.popup-header-text {
+    color: black;
+    font-family: 'Roboto';
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.flat-button-save {
+    background-color: #5d78ff;
+    color: #fff;
+}
+
+.flat-button {
+    width: 120px;
+    margin: 5px;
+}
+
+.checkbox-container {
+    height: 32px;
+    background-color: none;
+    border-radius: 10px;
+    padding: 0px 16px 0px 16px;
+    margin: 8px;
+}
+

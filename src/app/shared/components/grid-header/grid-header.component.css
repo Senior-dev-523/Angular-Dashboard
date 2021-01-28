@@ -1,0 +1,64 @@
+
+.grid-header-container {
+    height: 50px;
+    padding: 0 12px;
+ }
+
+.grid-header-title {
+    font-family: 'Poppins';
+    color: #535353;
+    font-weight: 500;
+    font-size: 12px;
+    margin: 0;
+}
+
+.item__icon {
+    flex: 0 0 20px;
+    margin-right: 10px;
+    fill: #02b4b6;
+}
+
+.grid-header-button {    
+    min-width: 60px;
+    width: 60px;
+    height: 26px;
+    padding: 0 9px;
+    background-color: #02b4b6;
+    color: white;
+}
+
+.grid-header-button-text {
+    color: #ffffff;
+    font-family: 'Roboto';
+    font-size: 9px;
+    font-weight: 400;
+}
+
+.grid-header-button-icon {
+    font-size: 10px;
+}
+
+@media screen and (min-width: 1200px) {
+    .grid-header-container {
+        height: 60px;
+        padding: 0 16px;
+    }
+
+    .grid-header-title {
+        font-size: 16px;
+    }
+
+    .grid-header-button-text {
+        font-size: 12px;
+    }
+
+    .grid-header-button-icon {
+        font-size: 24px;
+    }
+
+    .grid-header-button {
+        width: auto;
+        height: auto;
+        padding: 0 10px;
+    }
+}

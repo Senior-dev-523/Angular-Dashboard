@@ -1,0 +1,17 @@
+<div>
+    <div class="d-flex justify-content-between align-items-center popup-header">
+        <span class="popup-header-text"> Dispositivi </span>
+        <i class="material-icons" style="cursor: pointer;" (click)="onClose()"> clear </i>
+    </div>
+
+    <form style="padding: 24px;" class="h-100 edit-form" [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+
+        <mat-form-field class="mat-input" floatLabel="never" appearance="outline">
+            <mat-label>Numero di dispositivi</mat-label>
+            <input type="number" matInput class="mat-input" formControlName="numberOfDevices" />
+        </mat-form-field>
+
+        <app-editor-footer [isDisabled]="formGroup.invalid" (onCreateEvent)="onSubmit()" (onCloseEvent)="onClose()">
+        </app-editor-footer>
+    </form>
+</div>

@@ -1,0 +1,38 @@
+
+.menu-panel > .mat-expansion-panel-spacing {
+    margin: 0;
+}
+
+.menu-icon {
+    flex: 0 18px;
+    fill: #1976D2;
+}
+
+.menu-text {
+    font-family: 'Roboto';
+    color: black;
+    font-size: 14px;
+    font-weight: 500;
+    outline: none;
+    margin-left: 35px;
+}
+
+.linkSelected {
+    background-color: #E3F2FD !important;
+    color: #0053CB !important;   
+}
+
+.linkSelectedText {
+    color: #0053CB !important;   
+}
+
+.menu-tab-hidden {
+    height: 64px !important;
+    padding-left: 0 !important;
+    justify-content: center;
+}
+
+.menu-icon > .menu-icon-control {
+    width: 14px;
+    height: 14px;
+}

@@ -1,0 +1,69 @@
+<mat-card class="h-100">
+    <form class="h-100 tenant-form"
+        [formGroup]="otherForm"
+        (ngSubmit)="onSubmit()">
+        
+        <mat-form-field class="mat-select"
+                        floatLabel="never"
+                        appearance="outline">
+            <mat-label>Canale</mat-label>
+                <mat-select disableOptionCentering>
+                    <mat-option *ngFor="let channel of channels" [value]="channel.value">
+                        {{channel.label}}
+                    </mat-option>
+                </mat-select>
+        </mat-form-field>
+
+        <mat-form-field class="mat-input input-icon"
+                        floatLabel="never"
+                        appearance="outline">
+            <div class="input-icon-container">
+                <span class="menu-icon" [inlineSVG]="'./assets/icons/web-site.svg'"> </span> 
+            </div>
+            <mat-label>
+                Canale
+            </mat-label>
+            <input type="text" matInput/>
+        </mat-form-field>
+
+        <mat-form-field class="mat-input input-icon"
+                        floatLabel="never"
+                        appearance="outline">
+            <div class="input-icon-container">
+                <span class="menu-icon" [inlineSVG]="'./assets/icons/facebook.svg'"> </span>
+            </div>
+            <mat-label>Sito Web</mat-label>
+            <input type="text" matInput/>
+        </mat-form-field>
+  
+        <mat-form-field class="mat-input input-icon"
+                        floatLabel="never"
+                        appearance="outline">
+        <div class="input-icon-container">
+            <span class="menu-icon" [inlineSVG]="'./assets/icons/instagram.svg'"> </span>
+        </div>
+        <mat-label>Pagina Istagram</mat-label>
+        <input type="text" matInput/>
+        </mat-form-field>
+
+        <mat-form-field class="mat-input input-icon"
+                        floatLabel="never"
+                        appearance="outline">
+        <div class="input-icon-container">
+            <span class="menu-icon" [inlineSVG]="'./assets/icons/trip-advisor.svg'"> </span>
+         </div>
+        <mat-label>Tripadvisor</mat-label>
+        <input type="text" matInput/>
+        </mat-form-field>
+        <div class="w-100 d-flex align-items-center justify-content-end form-footer" style=" margin-top: auto;">
+            <div class="control-buttons-container"> 
+                <button mat-button (click)="returnToParentURL()" class="control-button cansle-button">ANNULLA</button>
+                <button mat-raised-button 
+                        [disabled]="otherForm.invalid" 
+                        class="control-button confirm-button" 
+                        color="primary" 
+                        type="submit"> SALVA </button>
+            </div>
+        </div>
+    </form>
+</mat-card>

@@ -1,0 +1,25 @@
+
+<div>
+    <div class="d-flex filters-container justify-content-between">
+        <div class="d-flex" style="flex-wrap: wrap;"> </div>
+
+        <button mat-raised-button (click)="onCreate()" class="add-submit-button add-button-text">
+            AGGIUNGI
+        </button>
+    </div>
+    
+    <mat-card class="grid-container">
+        <div *ngIf="pageData && languages; else loading">
+            <app-grid 
+                [gridOption]="gridOption"
+                [gridColumns]="gridColumns" 
+                [gridData]="pageData" 
+                [displayedColumns]="displayedColumns"
+                (openEditDialog)="onEdit($event)">
+            </app-grid>
+        </div>
+        <ng-template #loading>
+            <app-loading></app-loading>  
+        </ng-template>
+    </mat-card>
+</div>

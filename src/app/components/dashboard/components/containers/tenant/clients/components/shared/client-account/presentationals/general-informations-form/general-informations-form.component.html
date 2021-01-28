@@ -1,0 +1,265 @@
+<div class="h-100">
+    <form class="h-100 tenant-form"
+        [formGroup]="generalForm"
+        (ngSubmit)="onSubmit()">
+        <div class="h-100 container-fluid" style="padding: 0;">
+            <div class="h-100 row">
+                <div class="col-6">
+                    <mat-card class="h-100 d-flex flex-column">
+                        <div class="mat-card-header">
+                            Sede legale
+                        </div>
+                        <div class="d-flex flex-column" style="padding: 16px; padding-bottom: 54px;">
+                            <mat-form-field class="mat-input"
+                                            floatLabel="never"
+                                            appearance="outline">
+                                <mat-label>Ragione Sociale</mat-label>
+                                <input type="text"
+                                        matInput
+                                        class="mat-input"
+                                        formControlName="businessName"/>
+                            </mat-form-field>
+                            <mat-form-field class="mat-input"
+                                            floatLabel="never"
+                                            appearance="outline">
+                                <mat-label>Indirizzo</mat-label>
+                                <input type="text"
+                                        matInput
+                                        formControlName="address"/>
+                            </mat-form-field>
+                            <mat-form-field class="mat-input"
+                                            floatLabel="never"
+                                            appearance="outline">
+                                <mat-label>Città</mat-label>
+                                <input type="text"
+                                        matInput
+                                        formControlName="city"/>
+                            </mat-form-field>
+                            <div class="container-fluid" style="padding: 0;">
+                                <div class="row">
+                                    <div class="col-6" style="padding-right: 4px;">
+                                        <mat-form-field class="w-100 mat-input"
+                                        floatLabel="never"
+                                        appearance="outline">
+                                            <mat-label> CAP </mat-label>
+                                            <input type="text" matInput formControlName="zipCode"/>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-6" style="padding-left: 4px;">
+                                        <mat-form-field class="w-100 mat-input"
+                                        floatLabel="never"
+                                        appearance="outline">
+                                            <mat-label>Provincia</mat-label>
+                                            <input type="text" matInput formControlName="province"/>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container-fluid" style="padding: 0;">
+                                <div class="row">
+                                    <div class="col-6" style="padding-right: 4px;">
+                                        <mat-form-field class="w-100 mat-input"
+                                        floatLabel="never"
+                                        appearance="outline">
+                                            <mat-label>Regione</mat-label>
+                                            <input type="text" matInput formControlName="region"/>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-6" style="padding-left: 4px;">
+                                        <mat-form-field class="w-100 mat-input"
+                                        floatLabel="never"
+                                        appearance="outline">
+                                            <mat-label>Nazione </mat-label>
+                                            <input type="text" matInput formControlName="nation"/>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container-fluid" style="padding: 0;">
+                                <div class="row">
+                                    <div class="col-6" style="padding-right: 4px;">
+                                        <mat-form-field class="w-100 mat-input"
+                                                        floatLabel="never"
+                                                        appearance="outline">
+                                            <mat-label>Partita IVA</mat-label>
+                                            <input type="text" matInput formControlName="vatCode"/>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-6" style="padding-left: 4px;">
+                                        <mat-form-field class="w-100 mat-input"
+                                                        floatLabel="never"
+                                                        appearance="outline">
+                                            <mat-label>Codice fiscale</mat-label>
+                                            <input type="text" matInput formControlName="fiscalCode"/>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                            </div>
+                            <mat-form-field class="mat-input"
+                                            floatLabel="never"
+                                            appearance="outline">
+                                <mat-label>PEC</mat-label>
+                                <input type="text" matInput formControlName="pec"/>
+                            </mat-form-field>
+                            <mat-form-field class="mat-input"
+                                            floatLabel="never"
+                                            appearance="outline">
+                            <mat-label>Codice destinatario</mat-label>
+                            <input type="text" matInput formControlName="recipientCode"/>
+                            </mat-form-field>
+
+                            <div class="footer-container">
+                                <span class="footer-description"> La ‘Sede legale’ e la ‘Sede Operativa’ sono uguali? </span>
+                                <mat-radio-group>
+                                    <mat-radio-button class="mat-radio-button" style="margin-right: 18px;" value="1" color="primary">SI</mat-radio-button>
+                                    <mat-radio-button class="mat-radio-button" value="2" color="primary">NO</mat-radio-button>
+                                </mat-radio-group>
+                            </div>
+                        </div>
+                    </mat-card>
+                </div>
+
+                <div class="col-6"> 
+                    <mat-card class="h-100 d-flex flex-column">
+                        <div class="mat-card-header">
+                            Sede operativa
+                        </div>
+                        <div class="d-flex flex-column" style="padding: 16px; padding-bottom: 54px;">
+                            <mat-form-field class="w-100 mat-input"
+                                            floatLabel="never"
+                                            appearance="outline">
+                                <mat-label>Insegna</mat-label>
+                                <input type="text"
+                                        matInput
+                                        class="mat-input"/>
+                            </mat-form-field>
+                            <mat-form-field class="w-100 mat-input"
+                                            floatLabel="never"
+                                            appearance="outline">
+                                <mat-label>Indirizzo</mat-label>
+                                <input type="text"
+                                        matInput/>
+                            </mat-form-field>
+                            <mat-form-field class="mat-input"
+                                            floatLabel="never"
+                                            appearance="outline">
+                                <mat-label>Città</mat-label>
+                                <input type="text"
+                                        matInput/>
+                            </mat-form-field>
+                            <div class="container-fluid" style="padding: 0;">
+                                <div class="row">
+                                    <div class="col-6" style="padding-right: 4px;">
+                                        <mat-form-field class="w-100 mat-input"
+                                                        floatLabel="never"
+                                                        appearance="outline">
+                                            <mat-label>CAP</mat-label>
+                                            <input type="text"
+                                                    matInput/>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-6" style="padding-left: 4px;">
+                                        <mat-form-field class="w-100 mat-input"
+                                                        floatLabel="never"
+                                                        appearance="outline">
+                                            <mat-label>Provincia</mat-label>
+                                            <input type="text"
+                                                    matInput/>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container-fluid" style="padding: 0;">
+                                <div class="row">
+                                    <div class="col-6" style="padding-right: 4px;">
+                                        <mat-form-field class="w-100 mat-input"
+                                                        floatLabel="never"
+                                                        appearance="outline">
+                                            <mat-label>Regione</mat-label>
+                                            <input type="text"
+                                                    matInput/>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-6" style="padding-left: 4px;">
+                                        <mat-form-field class="w-100 mat-input"
+                                                        floatLabel="never"
+                                                        appearance="outline">
+                                            <mat-label>Nazione</mat-label>
+                                            <input type="text"
+                                                    matInput/>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container-fluid" style="padding: 0;">
+                                <div class="row">
+                                    <div class="col-6" style="padding-right: 4px;">
+                                        <mat-form-field class="w-100 mat-input input-icon"
+                                                        floatLabel="never"
+                                                        appearance="outline">
+                                            <div class="input-icon-container" style="width: 18px; height: 18px; left: -30px; top: 14px;">
+                                                <span class="menu-icon" [inlineSVG]="'./assets/icons/phone.svg'"> </span>
+                                            </div>
+                                            <mat-label>+1 (XXX) - XXX - XX -XX</mat-label>
+                                            <input type="text"
+                                                    matInput/>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-6" style="padding-left: 4px;">
+                                        <mat-form-field class="w-100 mat-input input-icon"
+                                                        floatLabel="never"
+                                                        appearance="outline">
+                                            <div class="input-icon-container">
+                                                <span class="menu-icon" [inlineSVG]="'./assets/icons/mobile.svg'"> </span>
+                                            </div>
+                                            <mat-label>+1 (XXX) - XXX - XX -XX</mat-label>
+                                            <input type="tel"
+                                                    matInput/>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                            </div>
+                            <mat-form-field class="mat-input"
+                                            floatLabel="never"
+                                            appearance="outline">
+                                <mat-label>example@mail.com</mat-label>
+                                <input type="email"
+                                       matInput/>
+                            </mat-form-field>
+
+                            <mat-form-field class="mat-select"
+                                            floatLabel="never"
+                                            appearance="outline">
+                                <mat-label>Tipologia</mat-label>
+                                <mat-select disableOptionCentering>
+                                  <mat-option *ngFor="let typology of typologies" [value]="typology.value">
+                                    {{typology.label}}
+                                  </mat-option>
+                                </mat-select>
+                              </mat-form-field>
+
+                            <mat-form-field class="mat-input"
+                                            floatLabel="never"
+                                            appearance="outline">
+                                <mat-label>Notes</mat-label>
+                                <textarea matInput style="height: 128px;"></textarea>
+                            </mat-form-field>
+                        </div>
+                    </mat-card>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-100 d-flex align-items-center justify-content-between form-footer" style="margin-top: auto;">
+            <span class="footer-description">   </span>
+            <div class="control-buttons-container"> 
+                <button mat-button (click)="returnToParentURL()" class="control-button cansle-button">ANNULLA</button>
+                <button mat-raised-button 
+                        [disabled]="generalForm.invalid" 
+                        class="control-button confirm-button" 
+                        color="primary"
+                        type="submit"> AVANTI </button>
+            </div>
+        </div>
+    </form>
+</div>

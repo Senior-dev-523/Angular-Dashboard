@@ -1,0 +1,45 @@
+
+.tenant-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.slide-toggle-label {
+    width: 112px;
+
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    color: #00000086;
+}
+
+.slide-toggle-container {
+    margin-top: 18px;
+}
+
+.slide-toggle {
+    padding: 5px 0;
+}
+
+.footer-description {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    color: rgba(0, 0, 0, 0.54);
+}
+
+.input-icon-container {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    opacity: 1;
+    left: -35px;
+    top: 12px;
+}
+
+.menu-icon {
+    fill: rgba(0, 0, 0, 0.24) !important; 
+}

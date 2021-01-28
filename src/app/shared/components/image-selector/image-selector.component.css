@@ -1,0 +1,20 @@
+.select-image-button {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    color: #2196F3;
+
+    background: #E3F2FD;
+}
+
+.image-title {
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.menu-icon {
+    fill: #42A5F5;
+}

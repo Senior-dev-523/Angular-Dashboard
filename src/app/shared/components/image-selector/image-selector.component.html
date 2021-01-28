@@ -1,0 +1,28 @@
+
+<input #file type="file" [hidden]="true" accept='image/*' (change)="preview(file.files)" />
+<div style="padding: 24px 0; height: 210px; width: 100%; background: #FAFAFA; border: 1px solid #E5E5E5;">
+
+    <div *ngIf="imgURL" style="position: relative; height: 100%; width: 100%; display: flex; align-items: center; justify-content: center;">
+        <div class="control-icon" style="position: absolute; top: -14px; right: 10px;" (click)="unSelectImage()">
+            <span class="menu-icon" style="cursor: pointer;" [inlineSVG]="getBaseTabIconPath('unselect-image.svg')"> </span>
+        </div>
+        <img [src]="imgURL" height="176">
+    </div>
+
+    <div *ngIf="!imgURL" style="height: 100%; display: flex; align-items: center; justify-content: space-between; flex-direction: column;">
+        <div class="control-icon">
+            <span class="menu-icon" style="cursor: pointer;" [inlineSVG]="getBaseTabIconPath('cloud.svg')"> </span>
+        </div>
+        
+        <span class="image-title"> IMAGE </span>
+
+        <button mat-raised-button
+                class="control-button confirm-button select-image-button" 
+                color="primary"
+                type="button"
+                (click)="selectImage()">
+            CARICA 
+        </button>
+    </div>
+   
+</div>

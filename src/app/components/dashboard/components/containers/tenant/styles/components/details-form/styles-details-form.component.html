@@ -1,0 +1,128 @@
+
+<div class="h-100 container-fluid" style="padding: 0;">
+    <form class="h-100 row" [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+        <div class="col-6">
+            <mat-card class="h-100">
+                <div class="h-100 tenant-form">
+                
+                    <mat-form-field class="mat-select" floatLabel="never" appearance="outline">
+                        <mat-label>Tenant</mat-label>
+                        <mat-select disableOptionCentering>
+                            <mat-option *ngFor="let type of types" [value]="type.value">
+                                {{type.label}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+
+                    <mat-form-field class="w-100 mat-input" floatLabel="never" appearance="outline">
+                        <mat-label>Logo</mat-label>
+                        <input type="text" matInput (click)="uploadLogo()" formControlName="logoURL"/>
+                        <div class="input-icon-container-end upload-arrow">
+                            <span class="menu-icon" [inlineSVG]="'./assets/icons/upload-arrow.svg'"> </span>
+                        </div>
+                    </mat-form-field>
+            
+                    <mat-form-field class="w-100 mat-input" floatLabel="never" appearance="outline">
+                        <mat-label>Upload Background</mat-label>
+                        <input type="text" matInput (click)="uploadBackground()" formControlName="backgroundURL"/>
+                        <div class="input-icon-container-end upload-arrow">
+                            <span class="menu-icon" [inlineSVG]="'./assets/icons/upload-arrow.svg'"> </span>
+                        </div>
+                    </mat-form-field>
+
+                    <mat-form-field class="w-100 mat-input" floatLabel="never" appearance="outline">
+                        <mat-label>Logo size in pixels</mat-label>
+                        <input type="text" matInput/>
+                    </mat-form-field>
+
+                    <mat-form-field floatLabel="never" appearance="outline">
+                        <mat-label>Descrizione</mat-label>
+                        <textarea class="description-input" matInput></textarea>
+                    </mat-form-field>
+        
+                </div>
+            </mat-card>
+        </div>
+
+        <div class="col-6">
+            <mat-card class="h-100">
+                <div class="h-100 tenant-form">
+                    <mat-form-field class="mat-input input-icon"
+                                    floatLabel="never"
+                                    appearance="outline">
+                        <div class="input-icon-container">
+                            <span class="menu-icon" [inlineSVG]="'./assets/icons/color-drop.svg'"> </span>
+                        </div>
+                        <mat-label>Color1</mat-label>
+                        <input type="text" matInput/>
+                        <div class="input-icon-container-end">
+                            <span class="menu-icon" [inlineSVG]="'./assets/icons/format_color_fill.svg'"> </span>
+                        </div>
+                    </mat-form-field>
+
+                    <mat-form-field class="mat-input input-icon"
+                                    floatLabel="never"
+                                    appearance="outline">
+                        <div class="input-icon-container">
+                            <span class="menu-icon" [inlineSVG]="'./assets/icons/color-drop.svg'"> </span>
+                        </div>
+                        <mat-label>Color2</mat-label>
+                        <input type="text" matInput/>
+                        <div class="input-icon-container-end">
+                            <span class="menu-icon" [inlineSVG]="'./assets/icons/format_color_fill.svg'"> </span>
+                        </div>
+                    </mat-form-field>
+
+                    <mat-form-field class="mat-input input-icon"
+                                    floatLabel="never"
+                                    appearance="outline">
+                        <div class="input-icon-container">
+                            <span class="menu-icon" [inlineSVG]="'./assets/icons/color-drop.svg'"> </span>
+                        </div>
+                        <mat-label>Color3</mat-label>
+                        <input type="text" matInput/>
+                        <div class="input-icon-container-end">
+                            <span class="menu-icon" [inlineSVG]="'./assets/icons/format_color_fill.svg'"> </span>
+                        </div>
+                    </mat-form-field>
+
+                    <mat-form-field class="mat-input input-icon"
+                                    floatLabel="never"
+                                    appearance="outline">
+                        <div class="input-icon-container">
+                            <span class="menu-icon" [inlineSVG]="'./assets/icons/color-drop.svg'"> </span>
+                        </div>
+                        <mat-label>Color4</mat-label>
+                        <input type="text" matInput/>
+                        <div class="input-icon-container-end">
+                            <span class="menu-icon" [inlineSVG]="'./assets/icons/format_color_fill.svg'"> </span>
+                        </div>
+                    </mat-form-field>
+
+                    
+                </div>
+            </mat-card>
+
+            <div class="w-100 d-flex align-items-center justify-content-end form-footer" style=" margin-top: auto;">
+                
+                <div class="control-buttons-container"> 
+
+                    <button mat-button (click)="returnToParentURL()" class="control-button cansle-button">ANNULLA</button>
+
+                    <button mat-raised-button class="control-button confirm-button importa-button" color="primary">
+                         <span> IMPORTA </span>
+                    </button>
+
+                    <button mat-raised-button 
+                            [disabled]="formGroup.invalid" 
+                            class="control-button confirm-button" 
+                            color="primary" 
+                            type="submit"> SALVA </button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+

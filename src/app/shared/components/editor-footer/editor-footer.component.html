@@ -1,0 +1,17 @@
+<div class="w-100 d-flex align-items-center justify-content-end form-footer">
+    <div class="control-buttons-container" style="margin-top: 24px;">
+        <button mat-raised-button class="control-button confirm-button cancel-button" color="primary"
+            (click)="onClose()">
+            <div class="d-flex">
+                <div class="control-icon">
+                    <span class="menu-icon" style="cursor: pointer;" [inlineSVG]="getBaseTabIconPath('arrow-left.svg')">
+                    </span>
+                </div>
+                <span> ANNULLA</span>
+            </div>
+        </button>
+
+        <button mat-raised-button [disabled]="isDisabled" class="control-button confirm-button" color="primary"
+            type="submit"> SALVA </button>
+    </div>
+</div>

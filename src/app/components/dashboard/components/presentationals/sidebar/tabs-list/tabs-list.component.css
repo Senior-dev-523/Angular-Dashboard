@@ -1,0 +1,13 @@
+
+.menu-tab {
+    height: 40px;
+    padding-left: 11px;
+    margin: 0 8px;
+    cursor: pointer;
+    outline: none; 
+    border-radius: 4px;
+}
+
+.menu-tab:hover {
+    background-color: rgba(0, 0, 0, 0.04) !important; 
+}

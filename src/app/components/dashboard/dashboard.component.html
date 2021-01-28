@@ -1,0 +1,22 @@
+<div class="h-100 container">
+    <div id="body-row" class="h-100 row">
+        <div class="d-none d-md-block" style="z-index: 100;">
+            <app-sidebar></app-sidebar>
+        </div>
+
+        <div class="w-100 h-100 col main-content">
+            <app-navbar></app-navbar>
+            <app-navbar-inherent></app-navbar-inherent>
+            <div class="content"
+                [ngClass]="{'content--enabled': isExtended$ | async, 'content--minimize': !(isExtended$ | async)}">
+                <div class="w-100 center-content">
+                    <router-outlet></router-outlet>  
+            
+                    <div class="footer d-flex align-items-center justify-content-center">
+                        <span class="footer-text"> © 2020 COMPANY  - All right reserved. </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

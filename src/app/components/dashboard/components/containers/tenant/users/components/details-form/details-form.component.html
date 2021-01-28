@@ -1,0 +1,108 @@
+<mat-card class="h-100">
+    <form class="h-100 tenant-form"
+        [formGroup]="otherForm"
+        (ngSubmit)="onSubmit()">
+        
+        <div class="container-fluid" style="padding: 0;">
+            <div class="row">
+                <div class="col-6" style="padding-right: 4px;">
+                    <mat-form-field class="w-100 mat-input" floatLabel="never" appearance="outline">
+                        <mat-label>Nome*</mat-label>
+                        <input type="text" matInput />
+                    </mat-form-field>
+                </div>
+        
+                <div class="col-6" style="padding-right: 4px;">
+                    <mat-form-field class="w-100 mat-input" floatLabel="never" appearance="outline">
+                        <mat-label>Cognome*</mat-label>
+                        <input type="text" matInput />
+                    </mat-form-field>
+                </div>
+            </div>
+        </div>
+
+        <mat-form-field class="w-100 mat-input" floatLabel="never" appearance="outline">
+            <mat-label>example@mail.com*</mat-label>
+            <input type="text" matInput />
+        </mat-form-field>
+
+        <mat-form-field class="w-100 mat-input" floatLabel="never" appearance="outline">
+            <mat-label>Password*</mat-label>
+            <input type="text" matInput />
+        </mat-form-field>
+
+        <div class="container-fluid" style="padding: 0;">
+            <div class="row">
+                <div class="col-6" style="padding-right: 4px;">
+                    <mat-form-field class="w-100 mat-input input-icon"
+                                    floatLabel="never"
+                                    appearance="outline">
+                        <div class="input-icon-container" style="width: 18px; height: 18px; left: -30px; top: 14px;">
+                            <span class="menu-icon" [inlineSVG]="'./assets/icons/phone.svg'"> </span>
+                        </div>
+                        <mat-label>+1 (XXX) - XXX - XX -XX</mat-label>
+                        <input type="text"
+                                matInput/>
+                    </mat-form-field>
+                </div>
+                <div class="col-6" style="padding-left: 4px;">
+                    <mat-form-field class="w-100 mat-input input-icon"
+                                    floatLabel="never"
+                                    appearance="outline">
+                        <div class="input-icon-container">
+                            <span class="menu-icon" [inlineSVG]="'./assets/icons/mobile.svg'"> </span>
+                        </div>
+                        <mat-label>+1 (XXX) - XXX - XX -XX</mat-label>
+                        <input type="tel"
+                                matInput/>
+                    </mat-form-field>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid" style="padding: 0;">
+            <div class="row">
+                <div class="col-6" style="padding-right: 4px;">
+                    <mat-form-field class="mat-select" floatLabel="never" appearance="outline">
+                        <mat-label>Ruolo</mat-label>
+                        <mat-select disableOptionCentering>
+                            <mat-option *ngFor="let role of roles" [value]="role.value">
+                                {{role.label}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <div class="col-6" style="padding-left: 4px;">
+                    <mat-form-field class="mat-select" floatLabel="never" appearance="outline">
+                        <mat-label>Tipo</mat-label>
+                        <mat-select disableOptionCentering>
+                            <mat-option *ngFor="let type of types" [value]="type.value">
+                                {{type.label}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex flex-column slide-toggle-container">
+            <div class="d-flex slide-toggle">
+                <samp class="slide-toggle-label">Attivo</samp>
+                <mat-slide-toggle class="mat-slide-toggle"  color="primary">
+                </mat-slide-toggle>
+            </div>
+        </div>
+
+        <div class="w-100 d-flex align-items-center justify-content-between form-footer" style=" margin-top: auto;">
+            <span class="footer-description"> NB: * Indica che il campo è obbligatorio </span>
+            <div class="control-buttons-container"> 
+                <button mat-button (click)="returnToParentURL()" class="control-button cansle-button">ANNULLA</button>
+                <button mat-raised-button 
+                        [disabled]="otherForm.invalid" 
+                        class="control-button confirm-button" 
+                        color="primary" 
+                        type="submit"> SALVA </button>
+            </div>
+        </div>
+    </form>
+</mat-card>

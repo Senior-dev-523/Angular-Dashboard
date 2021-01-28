@@ -1,0 +1,28 @@
+<div>
+    <div class="d-flex justify-content-between align-items-center popup-header">
+        <span class="popup-header-text"> Aggiungi Ristorante </span>
+        <i class="material-icons" style="cursor: pointer;" (click)="onClose()"> clear </i>
+    </div>
+
+    <form style="padding: 24px;" class="h-100 edit-form" [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+
+        <mat-form-field class="mat-input" floatLabel="never" appearance="outline">
+            <mat-label>Nome*</mat-label>
+            <input type="text" matInput class="mat-input" formControlName="name" />
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Descrizione</mat-label>
+            <textarea  class="description-input" matInput formControlName="description"></textarea>
+          </mat-form-field>
+
+        <div class="d-flex slide-toggle">
+            <samp class="slide-toggle-label">Attivo</samp>
+            <mat-slide-toggle class="mat-slide-toggle" formControlName="state" color="primary">
+            </mat-slide-toggle>
+        </div>
+
+        <app-editor-footer [isDisabled]="formGroup.invalid" (onCreateEvent)="onSubmit()" (onCloseEvent)="onClose()">
+        </app-editor-footer>
+    </form>
+</div>

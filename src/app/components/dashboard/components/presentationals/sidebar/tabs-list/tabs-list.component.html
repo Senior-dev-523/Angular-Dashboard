@@ -1,0 +1,19 @@
+<ng-container *ngFor="let tab of tabsList">
+    <div class="menu-tab d-flex align-items-center"
+        (click)="sidebarToggle(tab)"
+        [ngClass]="{ 'linkSelected': isTabSelected(tab), 'menu-tab-hidden': !isSidNavExtended }"
+        [routerLink]="[getNavigatePath(tab.tabName)]">
+        <div class="icon-container">
+            <span class="menu-icon" 
+                [ngClass]="{linkSelectedIcon: isTabSelected(tab)}"
+                [inlineSVG]="getBaseTabIconPath(tab)">
+            </span>
+        </div>
+   
+        <span class="d-flex align-items-center menu-text"
+            [ngClass]="{linkSelectedText: isTabSelected(tab)}"
+            *ngIf="isSidNavExtended">
+            {{ tab.tabText }}
+        </span>
+    </div>
+</ng-container>
