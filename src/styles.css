@@ -259,13 +259,13 @@ th.mat-header-cell:last-of-type {
 }
 .mat-form-field >
 .mat-form-field-wrapper {
-    height: 47px;
+    height: 50px;
 }
 
 .mat-form-field >
 .mat-form-field-wrapper >
 .mat-form-field-flex {
-    height: 30px;
+    height: 45px;
     padding-left: 8%;
     padding: 0px;
     background-color: #f2f3f8;

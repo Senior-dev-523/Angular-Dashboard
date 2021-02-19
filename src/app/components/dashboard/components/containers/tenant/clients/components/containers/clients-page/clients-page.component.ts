@@ -48,20 +48,70 @@ export class ClientsPageComponent implements OnInit {
   }
 
   getPageData() {
-    const pageData$ = this.clientService.getAllClients()
-    pageData$.subscribe(res => {
-      this.pageData = res.map((rec) => {
-        return {
-          id: rec['id'],
-          state: rec['active'],
-          title: rec['name'],
-          sity: 'San Vito Lo Capo',
-          count: 36,
-          date: rec['activationDate']
-        }
-      })
-      this.languages = [];
-    });
+    // const pageData$ = this.clientService.getAllClients()
+    // pageData$.subscribe(res => {
+    //   this.pageData = res.map((rec) => {
+    //     return {
+    //       id: rec['id'],
+    //       state: rec['active'],
+    //       title: rec['name'],
+    //       sity: 'San Vito Lo Capo',
+    //       count: 36,
+    //       date: rec['activationDate']
+    //     }
+    //   })
+    //   this.languages = [];
+    // });
+    this.pageData = [
+      {
+          id: 1,
+          state: true,
+          title: 'Title',
+          sity: 'Buenos Aires',
+          count: 233,
+          date: "16/11/2020"
+      },
+      {
+        id: 2,
+        state: true,
+        title: 'Title',
+        sity: 'Buenos Aires',
+        count: 233,
+        date: "16/11/2020"
+      },
+      {
+        id: 3,
+        state: true,
+        title: 'Title',
+        sity: 'Buenos Aires',
+        count: 233,
+        date: "16/11/2020"
+      },
+      {
+        id: 4,
+        state: true,
+        title: 'Title',
+        sity: 'Buenos Aires',
+        count: 233,
+        date: "16/11/2020"
+      },
+      {
+        id: 5,
+        state: true,
+        title: 'Title',
+        sity: 'Buenos Aires',
+        count: 233,
+        date: "16/11/2020"
+      },
+      {
+        id: 6,
+        state: true,
+        title: 'Title',
+        sity: 'Buenos Aires',
+        count: 233,
+        date: "16/11/2020"
+      },
+    ]
   }
 
   onCreate(): void {
